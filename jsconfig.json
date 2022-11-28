@@ -3,6 +3,7 @@
     "types": ["module"],
     "paths": {
       "@/*": ["./src/*"],
+      "@a/*": ["./src/apis/*"],
       "@v/*": ["./src/views/*"],
       "@c/*": ["./src/components/*"]
     }

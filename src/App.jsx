@@ -1,21 +1,22 @@
-import { useState } from 'react';
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { RecoilRoot } from 'recoil';
 import Home from '@v/Home.jsx';
+import Nav from "@c/Nav.jsx";
 
 function App() {
 
 
   return (
-    <div className="App" data-theme="dracula">
-      <nav>
-        <NavLink className={ a => `btn btn-info btn-xs active-${a.isActive}` } to={'/'}>home</NavLink>
-      </nav>
-      <div>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-        </Routes>
+    <RecoilRoot>
+      <div className="App" data-theme="dracula">
+        <Nav />
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+          </Routes>
+        </div>
       </div>
-    </div>
+    </RecoilRoot>
   )
 }
 
